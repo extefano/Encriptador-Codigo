@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -5,9 +6,8 @@
 body {
     background-color: #EBA82F ;
     color: #0A3871;
-    font-family: "monospace", "Arial Narrow";
     height: 100vh;
-    box-sizing: border-box;
+
 }
 .logo{
     margin-top: 5%;
@@ -17,12 +17,40 @@ body {
     align-items: center;
     margin: 10%;
     justify-content: space-between;
+
+
+
 }
 .insercion{
     width: 577px;
+    box-sizing: border-box;
+    border: 2px solid #C59D53;
+    box-sizing: border-box;
+
+
 }
-.botones{
+.insercion__texto{
+    background-color: #EBA82F;
+    border: none;
+    font-size: 32px;
+    font-family: "Abel", sans-serif;
+    font-style: normal;
+
+}
+.oculto{
+    position: absolute;
+    left: -9999px;
+}
+.insercion__disclaimer{
+    margin: 2px;
+    display: flex;
+    justify-content: start;
+}
+.insercion__botones{
     width: 680px;
+    font-family: "Abel", sans-serif;
+    display: flex;
+    justify-content: normal;
 }
 
 .botonen{

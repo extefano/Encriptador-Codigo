@@ -13,13 +13,21 @@
 
     <main class="landing">
         <section class="insercion">
-            <h2> Ingrese el texto aquí. </h2>
+            <label for="texto-a-encriptar" class="oculto">Texto a encriptar:</label>
+            <textarea id="texto-a-encriptar" class="insercion__texto">Ingrese el texto aquí</textarea>
+            <div class="insercion__disclaimer">
+                <img src="Recursos\Vector.png" alt="ícono de exclamación">
+                <p class="insercion__disclaimer__texto">
+                    Solo letras minúsculas y sin acentos
+                </p>
+            </div>
+            <div class="insercion__botones">
+                <button class="botonen"> Encriptar </button>
+                <button class="botondesen"> Desencriptar </button>
+            </div>
         </section>
 
-        <section class="botones">
-            <button class="botonen"> Encriptar </button>
-            <button class="botondesen"> Desencriptar </button>
-        </section>
+
 
 
     </main>
