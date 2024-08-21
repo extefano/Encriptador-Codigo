@@ -17,7 +17,7 @@ body {
     align-items: center;
     margin: 10%;
     justify-content: space-between;
-    box-sizing: border-box;
+
 
 
 }
@@ -25,6 +25,7 @@ body {
     width: 577px;
     box-sizing: border-box;
     border: 2px solid #C59D53;
+    box-sizing: border-box;
 
 
 }
@@ -36,16 +37,20 @@ body {
     font-style: normal;
 
 }
+.oculto{
+    position: absolute;
+    left: -9999px;
+}
 .insercion__disclaimer{
     margin: 2px;
     display: flex;
-    justify-content: normal;
+    justify-content: start;
 }
 .insercion__botones{
     width: 680px;
     font-family: "Abel", sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: normal;
 }
 
 .botonen{
