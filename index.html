@@ -12,9 +12,12 @@
     </header>
 
     <main class="landing">
-        <section class="insercion">
+
+        <div class="insercion">
             <label for="texto-a-encriptar" class="oculto">Texto a encriptar:</label>
-            <textarea id="texto-a-encriptar" class="insercion__texto">Ingrese el texto aquí</textarea>
+            <div class="insercion__area">
+                <textarea id="texto-a-encriptar" class="insercion__texto">Ingrese el texto aqui.</textarea>
+            </div>
             <div class="insercion__disclaimer">
                 <img src="Recursos\Vector.png" alt="ícono de exclamación">
                 <p class="insercion__disclaimer__texto">
@@ -22,10 +25,22 @@
                 </p>
             </div>
             <div class="insercion__botones">
-                <button class="botonen"> Encriptar </button>
-                <button class="botondesen"> Desencriptar </button>
+                <button onclick="encriptarTexto()" class="botonen"> Encriptar </button>
+                <button onclick="desencriptarTexto()" class="botondesen"> Desencriptar </button>
             </div>
-        </section>
+        </div>
+
+            <div id="resultado" class="resultado">
+                <div>
+                    <img src="Recursos/Encript.jpg" alt="imagen cerrojo con llave" class="resultado__image">
+                </div>
+
+                <div class="resultado__texto">
+                    <h2 class="resultado__h2">Ningún mensaje fue encontrado</h2>
+                    <p class="resultado__p">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+
+            </div>
 
 
 
