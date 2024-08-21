@@ -15,8 +15,9 @@ body {
 .landing{
     display: flex;
     align-items: center;
-    margin: 10%;
+    margin: 4% 15%;
     justify-content: space-between;
+
 
 
 
@@ -24,21 +25,31 @@ body {
 .insercion{
 
     box-sizing: border-box;
-    border: 2px solid #C59D53;
+    border-radius: 18px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    border: 2px solid #EBBD6A ;
+
+
+
+}
+.insercion__area {
+    width: 100%;
+    height: 367px;
 
 
 }
 .insercion__texto{
     background-color: #EBA82F;
-    width: 577px;
+    color: #0A3871;
+    width: 100%;
+    height: 100%;
     border: none;
+    border-radius: 18px;
     font-size: 32px;
     font-family: "Abel", sans-serif;
     font-style: normal;
-
 
 }
 .oculto{
@@ -58,6 +69,7 @@ body {
     font-size: 16px;
     font-style: normal;
 
+
 }
 
 .botonen{
@@ -66,6 +78,7 @@ body {
     width: 328px;
     padding: 24px 0px;
     border-radius: 24px;
+    margin: 5px;
 }
 .botondesen{
     background-color: #EBBD6A;
@@ -74,4 +87,5 @@ body {
     height: 67px;
     padding: 24px 0;
     border-radius: 24px;
+    margin: 5px;
 }

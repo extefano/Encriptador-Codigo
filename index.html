@@ -14,7 +14,9 @@
     <main class="landing">
         <section class="insercion">
             <label for="texto-a-encriptar" class="oculto">Texto a encriptar:</label>
-            <textarea id="texto-a-encriptar" class="insercion__texto">Ingrese el texto aquí</textarea>
+            <div class="insercion__area">
+                <textarea id="texto-a-encriptar" class="insercion__texto">Ingrese el texto aquí</textarea>
+            </div>
             <div class="insercion__disclaimer">
                 <img src="Recursos\Vector.png" alt="ícono de exclamación">
                 <p class="insercion__disclaimer__texto">
@@ -26,7 +28,10 @@
                 <button class="botondesen"> Desencriptar </button>
             </div>
         </section>
-
+        <section class="resultado">
+            <p id="encriptado">Ningún mensaje fue encontrado
+            </p>
+        </section>
 
 
 
