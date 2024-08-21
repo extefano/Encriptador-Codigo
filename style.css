@@ -103,7 +103,8 @@ body {
     width: 35%;
     height: 460px;
     padding: 32px;
-
+    font-family: "Abel", sans-serif;
+    font-style: normal;
 
 }
 .resultado__image{
