@@ -7,7 +7,7 @@ body {
     background-color: #EBA82F ;
     color: #0A3871;
     height: 100vh;
-    box-sizing: border-box;
+
 }
 .logo{
     margin-top: 5%;
@@ -17,20 +17,35 @@ body {
     align-items: center;
     margin: 10%;
     justify-content: space-between;
+    box-sizing: border-box;
+
+
 }
 .insercion{
     width: 577px;
+    box-sizing: border-box;
+    border: 2px solid #C59D53;
+
 
 }
 .insercion__texto{
+    background-color: #EBA82F;
+    border: none;
     font-size: 32px;
     font-family: "Abel", sans-serif;
     font-style: normal;
-    border: 2px solid #C59D53;
+
 }
-.botones{
+.insercion__disclaimer{
+    margin: 2px;
+    display: flex;
+    justify-content: normal;
+}
+.insercion__botones{
     width: 680px;
     font-family: "Abel", sans-serif;
+    display: flex;
+    justify-content: space-between;
 }
 
 .botonen{
