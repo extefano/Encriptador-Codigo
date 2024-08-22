@@ -14,9 +14,9 @@
     <main class="landing">
 
         <div class="insercion">
-            <label for="texto-a-encriptar" class="oculto">Texto a encriptar:</label>
+            <label for="campoEntrada"  class="oculto">Texto a encriptar:</label>
             <div class="insercion__area">
-                <textarea id="texto-a-encriptar" class="insercion__texto">Ingrese el texto aqui.</textarea>
+                <textarea id="campoEntrada"  class="insercion__texto">Ingrese el texto aqui.</textarea>
             </div>
             <div class="insercion__disclaimer">
                 <img src="Recursos\Vector.png" alt="ícono de exclamación">
@@ -24,9 +24,9 @@
                     Solo letras minúsculas y sin acentos
                 </p>
             </div>
-            <div class="insercion__botones">
-                <button onclick="encriptarTexto()" class="botonen"> Encriptar </button>
-                <button onclick="desencriptarTexto()" class="botondesen"> Desencriptar </button>
+            <div id="bloque_botones" class="insercion__botones">
+                <button id="encriptar" class="botonen"> Encriptar </button>
+                <button id="desencriptar"  class="botondesen"> Desencriptar </button>
             </div>
         </div>
 
@@ -46,7 +46,7 @@
 
 
     </main>
-
+    <script src="app.js"></script>
     <footer>
 </footer>
 </body>
