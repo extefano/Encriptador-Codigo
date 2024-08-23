@@ -4,7 +4,7 @@
     margin: 0;
 }
 body {
-    background-color: #EB6D2F ;
+    background-color: #fae3e3 ;
     color: #0A3871;
     height: 100vh;
 
@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     border: 2px solid #EBD62F ;
     width: 65%;
-    background-color:#EB6D2F;
+    background-color:#fae3e3;
     margin-top: 2%;
     margin-right: 2%;
     margin-left: 2%;
@@ -45,7 +45,7 @@ body {
 
 }
 .insercion__texto{
-    background-color: #EB6D2F;
+    background-color: #fae3e3;
     color: #0A3871;
     width: 98%;
     height: 100%;
