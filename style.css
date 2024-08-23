@@ -77,15 +77,15 @@ body {
 
 }
 .botonen{
-    background-color: #0A3871;
-    color: #EBA82F;
+    background-color: #c1edcc;
+    color: #0a3871;
     width: 328px;
     padding: 24px 0px;
     border-radius: 24px;
     margin: 5px;
 }
 .botondesen{
-    background-color: #EBC02F;
+    background-color: #548687;
     color: #0A3871;
     width: 328px;
     height: 67px;
@@ -95,9 +95,9 @@ body {
 }
 .resultado{
     box-sizing: border-box;
-    background-color:#EBC02F;
+    background-color:#c1edcc;
     border-radius: 18px;
-    border: #E2A32D;
+    border: #0a3871;
     display: flex;
     flex-direction: column;
     border: 2px solid #EBBD6A ;
