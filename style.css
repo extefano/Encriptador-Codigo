@@ -1,4 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.aparecer{
+    animation: aparecer 0.5s ease-in-out forwards;
+}
+
+.desaparecer{
+    animation: desaparecer 0.5s ease-in-out forwards;
+}
+.aparecer_rapido{
+    animation: aparecer 0.2s forwards;
+}
+.desaparecer_rapido{
+    animation: desaparecer 0.2s forwards;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -10,7 +43,7 @@ body {
 
 }
 .logo{
-    margin-top: 5%;
+    margin-top: 4%;
 }
 .landing{
     display: flex;
@@ -110,6 +143,19 @@ body {
     border-radius: 15px;
     margin-bottom: 25%;
 }
+.resultado__Procesado{
+    background-color: #fae3e3;
+    color: #0A3871;
+    width: 98%;
+    height: 96%;
+    border: none;
+    border-radius: 18px;
+    font-size: 32px;
+    font-family: "Abel", sans-serif;
+    font-style: normal;
+    resize: none;
+    padding: 1%
+}
 .resultado__h2{
     text-align: center;
     font-size: 16px;
@@ -118,4 +164,19 @@ body {
 .resultado__p{
     text-align: center;
     font-size: 16px;
+}
+.resultado__botonCopiar{
+    height: 10%;
+    width: 80%;
+    border-radius: 1000px;
+    border: none;
+    background-color: var(--color-dos);
+    font-family: var(--fuente-Inter);
+    font-weight: 400;
+    font-size: var(--tamaño-boton);
+    position: relative;
+    z-index: auto;
+    visibility: hidden;
+    transition: opacity 0.3s, filter 0.1s ease-in-out, background-color var(--transicion-botones) ease-in-out , box-shadow var(--transicion-botones) ease-in-out;
+
 }

@@ -1,17 +1,17 @@
 
 
 const cartel = ['imagenError', 'imagenInicial', 'parrafoResultado', 'tituloResultado']
-const iconos = ["Alura", "warning", "imagenError", "imagenInicial", "icono_tema", "icono_info"];
-const bloques = ["bloque_principal", "bloque_secundario", "bloque_botones", "titulo"]
-const boton_tema = document.getElementById("boton_tema");
+//const iconos = ["Alura", "warning", "imagenError", "imagenInicial", "icono_tema", "icono_info"];
+const bloques = ["insercion", "resultado", "bloque_botones", "titulo"]
+//const boton_tema = document.getElementById("boton_tema");
 
 
 
 //######################################################################################
 //main
 
-const temaGuardado = localStorage.getItem('tema') || 'oscuro';
-document.documentElement.setAttribute('tema', temaGuardado);
+//const temaGuardado = localStorage.getItem('tema') || 'oscuro';
+//document.documentElement.setAttribute('tema', temaGuardado);
 
 
 //######################################################################################
@@ -35,31 +35,13 @@ document.getElementById("desencriptar").addEventListener("click", function() {
 
 
 //funcion de limpiar
-document.getElementById("limpiar").addEventListener("click", function() {
-    document.getElementById('campoEntrada').value = "";
-    return;
-})
+//document.getElementById("limpiar").addEventListener("click", function() {
+//    document.getElementById('campoEntrada').value = "";
+//    return;
+//})
 
 
-//Funcion de cambio de tema
-boton_tema.addEventListener("click", function () {
-    boton_tema.disabled = true;
-    desaparecerBloques();
-    esconderIconos();
-    const temaActual = document.documentElement.getAttribute('tema');
-    const temaNuevo = temaActual === 'oscuro' ? 'claro' : 'oscuro';
-    document.querySelector("main").style.transition = "background-color 1s";
-    document.querySelector("body").style.transition = "background-color 1s";
-    setTimeout(() => {
-        document.documentElement.setAttribute('tema', temaNuevo);
-        actualizarIconos();
-        aparecerBloques();
-        aparecerIconos();
-        boton_tema.disabled = false;
-    }, 1100);
-    localStorage.setItem('tema', temaNuevo);
-    return;
-})
+
 
 
 //funcion de copiar
@@ -125,12 +107,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    actualizarIconos();
-    aparecerBloques();
-    aparecerIconos();
+ document.addEventListener("DOMContentLoaded", function() {
+     actualizarIconos();
+     aparecerBloques();
+     aparecerIconos();
 
-});
+ });
 
 
 
@@ -144,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function rechazar() {
-    const bloque = document.getElementById("bloque_secundario");
+    const bloque = document.getElementById("resultado");
     bloque.style.animationDelay = "0s";
     bloque.classList.remove("oculto");
     bloque.classList.remove("aparecer_rapido");
@@ -180,7 +162,7 @@ function rechazar() {
 
 
 function ocultarCartel() {
-    const bloque = document.getElementById("bloque_secundario");
+    const bloque = document.getElementById("resultado");
     bloque.style.animationDelay = "0s";
     bloque.classList.remove("oculto");
     bloque.classList.remove("aparecer_rapido");
@@ -217,25 +199,25 @@ function mostrarResultado() {
 
 
 
-function actualizarIconos() {
-    if (oscuro()) {
-        for (let icono of iconos) {
-            oscurecer(document.getElementById(icono));
-            boton_tema.setAttribute("texto-cartel", "Tema claro")
-        }
-    } else {
-        for (let icono of iconos) {
-            enclarecer(document.getElementById(icono));
+//function actualizarIconos() {
+//    if (oscuro()) {
+ //       for (let icono of iconos) {
+//            oscurecer(document.getElementById(icono));
+//            boton_tema.setAttribute("texto-cartel", "Tema claro")
+//        }
+//    } else {
+//        for (let icono of iconos) {
+/*            enclarecer(document.getElementById(icono));
             boton_tema.setAttribute("texto-cartel", "Tema oscuro")
         }
     }
 
     return 0;
-}
+}*/
 
 
 
-
+/*
 function enclarecer(elemento) {
     elemento.src = elemento.src.replace(/(\.[^/.]+)$/, '_claro$1');
     return;
@@ -246,7 +228,7 @@ function oscurecer(elemento) {
     elemento.src = elemento.src.replace(/_claro(\.[^/.]+)$/, '$1');
     return;
 }
-
+*/
 
 function aparecerBloques() {
     for (const elemento of bloques) {
@@ -291,9 +273,9 @@ function aparecerIconos() {
 
 
 
-function oscuro() {
-    return document.documentElement.getAttribute('tema') === "oscuro";
-}
+//function oscuro() {
+//    return document.documentElement.getAttribute('tema') === "oscuro";
+//}
 
 
 function ilegal(str) {

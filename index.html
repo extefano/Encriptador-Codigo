@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +14,10 @@
 
     <main class="landing">
 
-        <div class="insercion">
+        <div id="insercion" class="insercion">
             <label for="campoEntrada"  class="oculto">Texto a encriptar:</label>
             <div class="insercion__area">
-                <textarea id="campoEntrada"  class="insercion__texto">Ingrese el texto aqui.</textarea>
+                <textarea id="campoEntrada"  class="insercion__texto" placeholder="Ingrese el texto aqui."></textarea>
             </div>
             <div class="insercion__disclaimer">
                 <img src="Recursos\Vector.png" alt="ícono de exclamación">
@@ -31,14 +32,18 @@
         </div>
 
             <div id="resultado" class="resultado">
+                <div id="contenedor_salida">
+                    <textarea readonly id="campoSalida" class="resultado__Procesado aparecer" > </textarea>
+                </div>
                 <div>
                     <img src="Recursos/Encript.jpg" alt="imagen cerrojo con llave" class="resultado__image">
                 </div>
 
                 <div class="resultado__texto">
-                    <h2 class="resultado__h2">Ningún mensaje fue encontrado</h2>
-                    <p class="resultado__p">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <h2 id="tituloResultado" class="resultado__h2">Ningún mensaje fue encontrado</h2>
+                    <p id="parrafoResultado" class="resultado__p">Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
+                <button id="copiar" class="resultado__botonCopiar aparecer">Copiar</button>
 
             </div>
 
@@ -46,8 +51,9 @@
 
 
     </main>
-    <script src="app.js"></script>
+    
     <footer>
 </footer>
+<script src="app.js"></script>
 </body>
 </html>
