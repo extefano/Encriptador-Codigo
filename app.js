@@ -1,22 +1,4 @@
-
-
-const cartel = ['imagenError', 'imagenInicial', 'parrafoResultado', 'tituloResultado']
-//const iconos = ["Alura", "warning", "imagenError", "imagenInicial", "icono_tema", "icono_info"];
-const bloques = ["insercion", "resultado", "bloque_botones", "titulo"]
-//const boton_tema = document.getElementById("boton_tema");
-
-
-
-//######################################################################################
-//main
-
-//const temaGuardado = localStorage.getItem('tema') || 'oscuro';
-//document.documentElement.setAttribute('tema', temaGuardado);
-
-
-//######################################################################################
 //Eventos de botones
-
 
 //funcion de encriptar
 document.getElementById("encriptar").addEventListener("click", function() {
@@ -34,16 +16,6 @@ document.getElementById("desencriptar").addEventListener("click", function() {
 })
 
 
-//funcion de limpiar
-//document.getElementById("limpiar").addEventListener("click", function() {
-//    document.getElementById('campoEntrada').value = "";
-//    return;
-//})
-
-
-
-
-
 //funcion de copiar
 document.getElementById('copiar').addEventListener('click', function() {
     this.disabled = true;
@@ -57,9 +29,8 @@ document.getElementById('copiar').addEventListener('click', function() {
             console.error('Error al intentar copiar el texto: ', err);
         });
     } else {
-        // Fallback for older browsers
         campo.select();
-        campo.setSelectionRange(0, 99999); // For mobile devices
+        campo.setSelectionRange(0, 99999);
 
         try {
             const exitoso = document.execCommand('copy');
@@ -82,200 +53,41 @@ document.getElementById('copiar').addEventListener('click', function() {
 });
 
 
-//Transicion a otra pagina
-document.addEventListener('DOMContentLoaded', (event) => {
-    const delayedLinks = document.querySelectorAll('.delayed-link');
-    const allLinks = document.querySelectorAll('a'); // Seleccionar todos los enlaces
-
-    delayedLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const href = this.getAttribute('href');
-
-            // Desactivar todos los enlaces
-            allLinks.forEach(l => l.classList.add('disabled'));
-
-            // Añadir la clase de transición
-            desaparecerBloques();
-            esconderIconos();
-
-            setTimeout(() => {
-                window.location.href = href;
-            }, 1200);
-        });
-    });
-});
-
-
- document.addEventListener("DOMContentLoaded", function() {
-     actualizarIconos();
-     aparecerBloques();
-     aparecerIconos();
-
- });
-
-
-
-
 //####################################################################################
-//Funciones visuales
-
-
-
-
+//Control de mensajes e imagenes
 
 
 function rechazar() {
-    const bloque = document.getElementById("resultado");
-    bloque.style.animationDelay = "0s";
-    bloque.classList.remove("oculto");
-    bloque.classList.remove("aparecer_rapido");
-    bloque.classList.add("desaparecer_rapido");
-
-    setTimeout(() => {
-
-        let parrafo = document.getElementById('parrafoResultado');
-        let titulo = document.getElementById('tituloResultado');
-        document.getElementById('imagenInicial').style.display = "none";
-        document.getElementById('copiar').style.visibility = "hidden";
-        document.getElementById('contenedor_salida').style.display = "none";
-        document.getElementById('imagenError').style.display = "inline";
-        parrafo.style.display = "block";
-        titulo.style.display = "block";
-        parrafo.innerHTML = "No se permiten <strong>mayusculas</strong>, <strong>tildes</strong> ni <strong>caracteres especiales</strong>."
-        titulo.textContent = "Algo anduvo mal."
-
-
-        bloque.classList.remove("desaparecer_rapido");
-        bloque.classList.add("aparecer_rapido");
-        bloque.classList.add("oculto");
-
-        setTimeout(() => {
-            bloque.classList.remove("aparecer_rapido");
-            bloque.style.animationDelay = "0.6s";
-        }, 1000);
-
-    }, 300);
-
+    let parrafo = document.getElementById('parrafoResultado');
+    let titulo = document.getElementById('tituloResultado');
+    document.getElementById('copiar').style.visibility = "hidden";
+    document.getElementById('campoSalida').style.display = "none";
+    document.getElementById('cerrojo').style.display = "block";
+    document.getElementById('cerrojo_imagen').src = "Recursos/error.png";
+    document.getElementById('texto_cerrojo').style.display = "block";
+    parrafo.innerHTML = "No se permiten <strong>mayusculas</strong>, <strong>tildes</strong> ni <strong>caracteres especiales</strong>."
+    titulo.textContent = "Algo anduvo mal."
 
 }
 
 
 function ocultarCartel() {
-    const bloque = document.getElementById("resultado");
-    bloque.style.animationDelay = "0s";
-    bloque.classList.remove("oculto");
-    bloque.classList.remove("aparecer_rapido");
-    bloque.classList.add("desaparecer_rapido");
-
-    setTimeout(() => {
-        document.getElementById('imagenError').style.display = "none";
-        document.getElementById('imagenInicial').style.display = "none";
-        document.getElementById('parrafoResultado').style.display = "none";
-        document.getElementById('tituloResultado').style.display = "none";
-        mostrarResultado();
-
-        bloque.classList.remove("desaparecer_rapido");
-        bloque.classList.add("aparecer_rapido");
-        bloque.classList.add("oculto");
-        setTimeout(() => {
-            bloque.classList.remove("aparecer_rapido");
-            bloque.style.animationDelay = "0.6s";
-        }, 1000);
-    }, 300);
-
-
+    document.getElementById('cerrojo').style.display = "none";
+    document.getElementById('texto_cerrojo').style.display = "none";
+    mostrarResultado();
     return;
 }
 
 
 function mostrarResultado() {
     document.getElementById('copiar').style.visibility = "visible";
-    document.getElementById('contenedor_salida').style.display = "block";
+    document.getElementById('campoSalida').style.display = "block";
     return;
-}
-
-
-
-
-
-//function actualizarIconos() {
-//    if (oscuro()) {
- //       for (let icono of iconos) {
-//            oscurecer(document.getElementById(icono));
-//            boton_tema.setAttribute("texto-cartel", "Tema claro")
-//        }
-//    } else {
-//        for (let icono of iconos) {
-/*            enclarecer(document.getElementById(icono));
-            boton_tema.setAttribute("texto-cartel", "Tema oscuro")
-        }
-    }
-
-    return 0;
-}*/
-
-
-
-/*
-function enclarecer(elemento) {
-    elemento.src = elemento.src.replace(/(\.[^/.]+)$/, '_claro$1');
-    return;
-}
-
-
-function oscurecer(elemento) {
-    elemento.src = elemento.src.replace(/_claro(\.[^/.]+)$/, '$1');
-    return;
-}
-*/
-
-function aparecerBloques() {
-    for (const elemento of bloques) {
-        document.getElementById(elemento).classList.add("oculto");
-        document.getElementById(elemento).classList.remove("desaparecer");
-        document.getElementById(elemento).classList.add("aparecer");
-    }
-}
-
-
-function desaparecerBloques() {
-    for (const elemento of bloques) {
-        document.getElementById(elemento).classList.remove("oculto");
-        document.getElementById(elemento).classList.remove("aparecer");
-        document.getElementById(elemento).classList.add("desaparecer");
-    }
-}
-
-
-function esconderIconos() {
-    let botones = document.querySelectorAll(".menu__boton");
-    for (const elemento of botones) {
-        elemento.classList.remove("fuera_de_pantalla");
-        elemento.classList.remove("aparecer_de_pantalla");
-        elemento.classList.add("salir_de_pantalla");
-    }
-}
-
-function aparecerIconos() {
-    let botones = document.querySelectorAll(".menu__boton");
-    for (const elemento of botones) {
-        elemento.classList.add("fuera_de_pantalla");
-        elemento.classList.remove("salir_de_pantalla");
-        elemento.classList.add("aparecer_de_pantalla");
-    }
 }
 
 //###############################################################################
-//Funciones de procesamiento y otras funciones
+//Otras funciones
 
-
-
-
-
-//function oscuro() {
-//    return document.documentElement.getAttribute('tema') === "oscuro";
-//}
 
 
 function ilegal(str) {

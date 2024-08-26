@@ -154,7 +154,8 @@ body {
     font-family: "Abel", sans-serif;
     font-style: normal;
     resize: none;
-    padding: 1%
+    padding: 1%;
+    display:none;
 }
 .resultado__h2{
     text-align: center;
