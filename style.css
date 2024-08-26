@@ -43,14 +43,14 @@ body {
 
 }
 .logo{
-    margin-top: 4%;
+    margin-top: 1%;
 }
 .landing{
     display: flex;
-    align-items: center;
     margin: 2% 10%;
     justify-content: space-between;
     font-size: 16px;
+    height: 100%;
 
 
 }
@@ -61,8 +61,8 @@ body {
     display: flex;
     flex-direction: column;
     border: 2px solid #0A3871 ;
-    width: 65%;
-    height: 25rem;
+    width: 69.4444444444%;
+    height: 80%;
     background-color:#fae3e3;
     margin: 1%;
 
@@ -70,7 +70,7 @@ body {
 }
 .insercion__area {
     width: 100%;
-    height: 24rem;
+    height: 90%;
 
 
 
@@ -79,7 +79,7 @@ body {
     background-color: #fae3e3;
     color: #0A3871;
     width: 98%;
-    height: 94%;
+    height: 90%;
     border: none;
     border-radius: 18px;
     font-size: 2rem;
@@ -105,8 +105,6 @@ body {
     align-items: flex-start;
     font-size: 1rem;
     font-style: normal;
-
-
 }
 .botonen{
     background-color: #c1edcc;
@@ -132,10 +130,10 @@ body {
     border: #0a3871;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     border: 2px solid #0A3871 ;
-    width: 35%;
-    height: 28.75rem;
-    padding: 1%;
+    width: 30.555555555555%;
+    height:84.375%;
     font-family: "Abel", sans-serif;
     font-style: normal;
 
@@ -186,34 +184,37 @@ body {
     transition: opacity 0.3s, filter 0.1s ease-in-out, background-color var(--transicion-botones) ease-in-out , box-shadow var(--transicion-botones) ease-in-out;
 
 }
-@media (max-width: 1190px) {
+@media (max-width: 768px) {
     .landing{
         flex-direction: column;
+        100%
     }
     .insercion{
         width: 100%;
-        height: 44.625rem;
+        height: 79.81260647359455%;
     }
     .insercion__area {
-        height:40.625rem;
+        height: 92.84951974386339%;
 
     }
 
     .resultado{
         width: 100%;
-        height: 20rem;
+        height: auto;
     }
     .resultado__image{
-        width: 25%;
+        width: 22%;
         height: auto;
-        border-radius: 2rem;
-        margin-bottom: 1.8%;
+        border-radius: 2.4rem;
+        margin-bottom: 1%;
+        margin-left: 1%;
+        margin-top: 1%;
     }
     .resultado__Procesado{
         background-color: #fae3e3;
         color: #0A3871;
-        width: 91%;
-        height: 12rem;
+        width: 96.5%;
+        height: 100%;
         border: none;
         border-radius: 18px;
         font-size: 2rem;
@@ -221,11 +222,77 @@ body {
         font-style: normal;
         resize: none;
         padding: 1%;
-        margin: 0.4rem;
+        margin: 0.2rem;
         display:none;
     }
     .resultado__botonCopiar{
         height: 3.60rem;
         width: 100%;
+    }
+}
+@media (max-width: 375px) {
+    .landing{
+        flex-direction: column;
+        align-content: flex-start;
+    }
+    .insercion{
+        width: 100%;
+        height: 68.91747052518757%;
+        margin: 0%;
+    }
+    .insercion__area {
+        height:40.625rem;
+    }
+    .insercion__botones{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    .botonen{
+        height: 4.1875rem;
+        width: 98%;
+        margin: 1%;
+        border-radius: 24px;
+        margin: 0.3125rem;
+    }
+    .botondesen{
+        width: 98%;
+        height: 4.1875rem;
+        margin: 1%;
+        border-radius: 24px;
+        margin: 0.3125rem;
+    }
+    .resultado{
+        box-sizing: border-box;
+        background-color:#c1edcc;
+        border-radius: 1.125rem;
+        border: #0a3871;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid #0A3871 ;
+        width: 100%;
+        height:auto;
+        font-family: "Abel", sans-serif;
+        font-style: normal;
+    
+    }
+    .resultado__image{
+        width: 25%;
+        height: 80%;
+        border-radius: 15px;
+        margin-bottom: 2%;
+    }
+    .resultado__Procesado{
+        width: 96.5%;
+        height: 100%;
+        border-radius:1.125rem;
+        font-size: 2rem;
+        font-family: "Abel", sans-serif;
+        font-style: normal;
+        resize: none;
+        padding: 1%;
+        margin: 0.2rem;
+        display:none;
     }
 }
