@@ -189,7 +189,6 @@ body {
 @media (max-width: 768px) {
     .landing{
         flex-direction: column;
-        100%
     }
     .insercion{
         width: 100%;
